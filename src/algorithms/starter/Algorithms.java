@@ -102,7 +102,7 @@ public class Algorithms {
             }
         }
         
-        // Compare with java.util.Arrays.sort() :
+        // Compare with java.util.Arrays.sort() for profiling reference :
         Algorithms.javaUtilSort(arrayLength, display);
         
         System.out.println("\n-- END --------------------------------------------");

@@ -210,21 +210,4 @@ public class ArraySort {
     }
     //</editor-fold>
     
-    //<editor-fold defaultstate="collapsed" desc="Recursive merge sort algorithm 2">
-    public void mergeSort2(int[] a) {
-        // TODO : code this.
-        this.recursiveBubbleSort1(a);
-    }
-    
-    /**
-     * Sub-function used by mergeSort2.
-     * @param a
-     * @param startI
-     * @param endI 
-     */
-    private void mergeSort2SubFunc(int[] a, int startI, int endI) {
-        
-    }
-    //</editor-fold>
-    
 }
