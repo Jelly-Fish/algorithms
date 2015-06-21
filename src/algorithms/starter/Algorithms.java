@@ -64,7 +64,7 @@ public class Algorithms {
             final boolean display) throws InstantiationException, IllegalAccessException,
             IllegalArgumentException, InvocationTargetException {
 
-        final Object lC = c.newInstance();
+        Object lC = c.newInstance();
         final Method[] m = c.getDeclaredMethods();
 
         for (Method lM : m) {
@@ -74,7 +74,8 @@ public class Algorithms {
                 System.out.println("\n---------------------------------------------------");
                 System.out.println("-- Method : " + lM.toString());
                 System.out.println("---------------------------------------------------");
-
+                
+                lC = c.newInstance();
                 Algorithms.rand = new Random();
 
                 int[] a = new int[arrayLength];

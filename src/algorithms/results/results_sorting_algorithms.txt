@@ -1,4 +1,67 @@
 ################################################################################
+# 21-06-2015
+
+run:
+---------------------------------------------------
+-- Algorithm testing ------------------------------
+-- Array length = 1000
+-- Random factor (array.length * factor) = 10
+-- >> random window : 0 to 9999
+-- Display all data param = false
+---------------------------------------------------
+
+---------------------------------------------------
+-- Method : public void algorithms.sorting.ArraySort.recursiveBubbleSort1(int[])
+---------------------------------------------------
+>> function call count = 960
+>> function ns duration = 7836335
+>> function ms duration = 7.836335
+>> assets check result = true
+
+---------------------------------------------------
+-- Method : public void algorithms.sorting.ArraySort.classicBubbleSort(int[])
+---------------------------------------------------
+>> function call count = 1000
+>> function ns duration = 2381606
+>> function ms duration = 2.381606
+>> assets check result = true
+
+---------------------------------------------------
+-- Method : public void algorithms.sorting.ArraySort.mergeSort2(int[])
+---------------------------------------------------
+>> function call count = 975
+>> function ns duration = 1842762
+>> function ms duration = 1.842762
+>> assets check result = true
+
+---------------------------------------------------
+-- Method : public void algorithms.sorting.ArraySort.slideSort1(int[])
+---------------------------------------------------
+>> function call count = 922
+>> function ns duration = 1627224
+>> function ms duration = 1.627224
+>> assets check result = true
+
+---------------------------------------------------
+-- Method : public void algorithms.sorting.ArraySort.mergeSort1(int[])
+---------------------------------------------------
+>> function call count = 1999
+>> function ns duration = 1075978
+>> function ms duration = 1.075978
+>> assets check result = true
+
+---------------------------------------------------
+-- java.util.Arrays.sort() reference --------------
+---------------------------------------------------
+>> function call count = -1
+>> function ns duration = 403278
+>> function ms duration = 0.403278
+>> assets check result = true
+
+-- END --------------------------------------------
+BUILD SUCCESSFUL (total time: 0 seconds)
+
+################################################################################
 # 18-06-2015
 ---------------------------------------------------
 -- Algorithm testing ------------------------------

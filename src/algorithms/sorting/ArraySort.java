@@ -140,19 +140,24 @@ public class ArraySort {
      * @param a array to sort.
      */
     public void mergeSort1(int[] a) {
-        this.topDownSplitMerge(a, 0, a.length, new int[a.length]);
+        ArraySort.calls = 0;
+        this.splitMerge(a, 0, a.length, new int[a.length]);
     }
 
     /**
      * iBegin is inclusive; iEnd is exclusive (a[iEnd] is not in the set)
      *
+     * Top down split merge.
+     * 
      * @param a
      * @param iBegin
      * @param iEnd
      * @param b
      */
-    private void topDownSplitMerge(int[] a, final int iBegin, int iEnd, int[] b) {
+    private void splitMerge(int[] a, final int iBegin, int iEnd, int[] b) {
 
+        ++ArraySort.calls;
+        
         if (iEnd - iBegin < 2) { 
             // if run size == 1 >> sorted
             return;
@@ -161,11 +166,13 @@ public class ArraySort {
         // recursively split runs into two halves until run size == 1,
         // then merge them and return back up the call chain.
         int iMiddle = (iEnd + iBegin) / 2; // set middle index.
-        this.topDownSplitMerge(a, iBegin, iMiddle, b); // split / merge left half.
-        this.topDownSplitMerge(a, iMiddle, iEnd, b); // split / merge right half.
-        this.topDownMerge(a, iBegin, iMiddle, iEnd, b); // merge the two half runs.
+        this.splitMerge(a, iBegin, iMiddle, b); // split / merge left half.
+        this.splitMerge(a, iMiddle, iEnd, b); // split / merge right half.
+        this.merge(a, iBegin, iMiddle, iEnd, b); // merge the two half runs.
         
-        // copy the merged runs back to a :
+        // copy the merged runs back to a[]
+        // Here, System.arraycopy is not to be used to ease porting to other 
+        // languages.
         for (int i = iBegin; i < iEnd; i++) {
             a[i] = b[i];
         }
@@ -174,13 +181,15 @@ public class ArraySort {
     /**
      * left half is a[iBegin : iMiddle-1] right half is a[iMiddle : iEnd-1].
      *
+     * Top down merge.
+     * 
      * @param a
      * @param iBegin
      * @param iMiddle
      * @param iEnd
      * @param b
      */
-    private void topDownMerge(int[] a, final int iBegin, final int iMiddle, 
+    private void merge(int[] a, final int iBegin, final int iMiddle, 
             final int iEnd, int[] b) {
 
         // iS = start index. iM = middle index.
@@ -198,6 +207,23 @@ public class ArraySort {
                 ++iM;
             }
         }
+    }
+    //</editor-fold>
+    
+    //<editor-fold defaultstate="collapsed" desc="Recursive merge sort algorithm 2">
+    public void mergeSort2(int[] a) {
+        // TODO : code this.
+        this.recursiveBubbleSort1(a);
+    }
+    
+    /**
+     * Sub-function used by mergeSort2.
+     * @param a
+     * @param startI
+     * @param endI 
+     */
+    private void mergeSort2SubFunc(int[] a, int startI, int endI) {
+        
     }
     //</editor-fold>
     
