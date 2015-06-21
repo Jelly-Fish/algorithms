@@ -1,0 +1,84 @@
+################################################################################
+# 18-06-2015
+---------------------------------------------------
+-- Algorithm testing ------------------------------
+---------------------------------------------------
+---------------------------------------------------
+-- recursive buble sorting algorithm --------------
+---------------------------------------------------
+>> function call count = 980
+>> function ns duration = 9363908
+>> function ms duration = 9.363908
+>> assets check result = true
+
+---------------------------------------------------
+-- bubble sorting algorithm -----------------------
+---------------------------------------------------
+>> function call count = 1000
+>> function ns duration = 3732562
+>> function ms duration = 3.732562
+>> assets check result = true
+
+---------------------------------------------------
+-- recursive buble sorting algorithm --------------
+-- with array index slipping ----------------------
+---------------------------------------------------
+>> function call count = 943
+>> function ns duration = 1617814
+>> function ms duration = 1.617814
+>> assets check result = true
+
+---------------------------------------------------
+-- java.util.Arrays sorting -----------------------
+---------------------------------------------------
+>> function call count = -1
+>> function ns duration = 3001274
+>> function ms duration = 3.001274
+>> assets check result = true
+
+recursive buble sorting algorithm  with array index slipping (sort3 with sort1 calls) 
+beats java.util.Arrays.
+
+################################################################################
+# 18-06-2015
+---------------------------------------------------
+-- Algorithm testing ------------------------------
+---------------------------------------------------
+
+---------------------------------------------------
+-- recursive buble sorting algorithm --------------
+---------------------------------------------------
+>> function call count = 925
+>> function ns duration = 10725130
+>> function ms duration = 10.72513
+>> assets check result = true
+
+---------------------------------------------------
+-- bubble sorting algorithm -----------------------
+---------------------------------------------------
+>> function call count = 1000
+>> function ns duration = 2920876
+>> function ms duration = 2.920876
+>> assets check result = true
+
+---------------------------------------------------
+-- recursive buble sorting algorithm --------------
+-- with array index slipping ----------------------
+---------------------------------------------------
+>> function call count = 960
+>> function ns duration = 2369630
+>> function ms duration = 2.36963
+>> assets check result = true
+
+---------------------------------------------------
+-- java.util.Arrays sorting -----------------------
+---------------------------------------------------
+>> function call count = -1
+>> function ns duration = 670988
+>> function ms duration = 0.670988
+>> assets check result = true
+
+recursive buble sorting algorithm  with array index slipping (sort3 with sort1 calls) 
+beats sort2 on average 4/5 runs.
+
+################################################################################
