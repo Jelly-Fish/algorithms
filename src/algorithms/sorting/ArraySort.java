@@ -63,7 +63,7 @@ public class ArraySort {
             a[index] = tmp;
         }
     }
-    
+
     /**
      * Get index of lowest integer value in an integer array.
      *
@@ -148,7 +148,7 @@ public class ArraySort {
      * iBegin is inclusive; iEnd is exclusive (a[iEnd] is not in the set)
      *
      * Top down split merge.
-     * 
+     *
      * @param a
      * @param iBegin
      * @param iEnd
@@ -157,19 +157,19 @@ public class ArraySort {
     private void splitMerge(int[] a, final int iBegin, int iEnd, int[] b) {
 
         ++ArraySort.calls;
-        
-        if (iEnd - iBegin < 2) { 
+
+        if (iEnd - iBegin < 2) {
             // if run size == 1 >> sorted
             return;
         }
-        
+
         // recursively split runs into two halves until run size == 1,
         // then merge them and return back up the call chain.
         int iMiddle = (iEnd + iBegin) / 2; // set middle index.
         this.splitMerge(a, iBegin, iMiddle, b); // split / merge left half.
         this.splitMerge(a, iMiddle, iEnd, b); // split / merge right half.
         this.merge(a, iBegin, iMiddle, iEnd, b); // merge the two half runs.
-        
+
         // copy the merged runs back to a[]
         // Here, System.arraycopy is not to be used to ease porting to other 
         // languages.
@@ -182,14 +182,14 @@ public class ArraySort {
      * left half is a[iBegin : iMiddle-1] right half is a[iMiddle : iEnd-1].
      *
      * Top down merge.
-     * 
+     *
      * @param a
      * @param iBegin
      * @param iMiddle
      * @param iEnd
      * @param b
      */
-    private void merge(int[] a, final int iBegin, final int iMiddle, 
+    private void merge(int[] a, final int iBegin, final int iMiddle,
             final int iEnd, int[] b) {
 
         // iS = start index. iM = middle index.
@@ -197,7 +197,7 @@ public class ArraySort {
 
         // While there are elements in the left or right runs
         for (int i = iBegin; i < iEnd; i++) {
-            
+
             // If left run head exists and is <= existing right run head.
             if (iS < iMiddle && (iM >= iEnd || a[iS] <= a[iM])) {
                 b[i] = a[iS];
@@ -209,5 +209,24 @@ public class ArraySort {
         }
     }
     //</editor-fold>
+
+    //<editor-fold defaultstate="collapsed" desc="Stooge sort">
+    /**
+     * Stooge sort implementation.
+     * @param a 
+     */
+    public void stoogeSort1(int[] a) {
+        //this.stoogeSort(a, 0, a.length - 1);
+    }
     
+    /**
+     * @param a
+     * @param i
+     * @param j 
+     */
+    private void stoogeSort(int[] a, int i, int j) {
+
+    }
+    //</editor-fold>
+
 }
